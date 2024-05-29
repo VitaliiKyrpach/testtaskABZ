@@ -6,11 +6,13 @@ $bp-wide: 2560px;
 	--color-primary-dark: rgba(0, 0, 0, 0.87);
     --color-secondary-dark: #7E7E7E;
 	--color-primary-light: #FFFFFF;
-    --color-secondary-light: rgba(255, 255, 255, 0.87);
 	--color-accent: #F4E041;
 	--color-accent-hover: #FFE302;
+	--color-back: #F8F8F8;
 }
 
 $color-primary-dark: var(--color-primary-dark);
+$color-primary-light: var(--color-primary-light);
 $color-accent: var(--color-accent);
 $color-accent-hover: var(--color-accent-hover);
+$color-back: var(--color-back);

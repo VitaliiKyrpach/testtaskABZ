@@ -9,9 +9,11 @@ import { Hero } from "./Hero/Hero"
 export const App = () => {
   return <>
   <Header/>
-  <Hero/>
-  <Catalog/>
-  <Form/>
+  <main>
+     <Hero/>
+     <Catalog/>
+     <Form/>
+  </main>
   </>
 }
 

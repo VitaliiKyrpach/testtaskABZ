@@ -1,3 +1,3 @@
 export const Catalog = () =>{
-    return <div>Catalog section</div>
+    return <div id='users'>Catalog section</div>
 }
