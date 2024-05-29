@@ -1,0 +1,14 @@
+.button{
+    color: $color-primary-dark;
+    background-color: $color-accent;
+    width: 100px;
+    height: 34px;
+    border: none;
+    border-radius: 80px;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 150ms linear;
+}
+.button:hover, .button:focus{
+    background-color: $color-accent-hover;
+}
