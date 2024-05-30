@@ -13,7 +13,6 @@ export const Catalog = () =>{
     useEffect(()=>{
         const fetch = async() =>{
             const data = await getData(page);
-            console.log(data)
             page == 1 ? setUsers(data.data.users) : setUsers(prev=> [...prev, ...data.data.users])
             setTotalPages(data.data.total_pages)
         }
