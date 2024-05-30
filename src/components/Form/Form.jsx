@@ -1,3 +1,3 @@
 export const Form = () =>{
-    return <div id='register'>Form section</div>
+    return <section id='register' className="form">Form section</section>
 }

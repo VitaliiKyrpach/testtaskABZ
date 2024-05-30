@@ -1,10 +1,10 @@
 .header{
-    background-color: $color-primary-light
-}
-.headerCover{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 13px 0;
+    background-color: $color-primary-light;
+    .cover{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 13px 0;
+    }
 }

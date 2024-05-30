@@ -1,6 +1,6 @@
 import svg from "../../img/sprite.svg"
 export const Logo = () =>{
-    return <svg className='logo'>
+    return <a className='logo' href="#"><svg>
     <use href={`${svg}#icon-Logo`}></use>
-</svg>
+    </svg></a>   
 }

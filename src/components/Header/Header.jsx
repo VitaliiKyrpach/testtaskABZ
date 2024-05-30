@@ -5,7 +5,7 @@ import { UserNav } from "../UserNav/UserNav"
 export const Header = () =>{
  return <header className="header">
     <Container>
-        <section className="headerCover">
+        <section className="cover">
            <Logo/>
            <UserNav/>
         </section>
