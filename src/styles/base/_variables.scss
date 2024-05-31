@@ -8,9 +8,11 @@ $bp-wide: 2560px;
 	--color-primary-light: #FFFFFF;
 	--color-secondary-light: #D0CFCF;
 	--color-accent: #F4E041;
+	--color-accent-secondary: #00BDD3;
 	--color-error: #CB3D40;
 	--color-accent-hover: #FFE302;
 	--color-back: #F8F8F8;
+	--color-disabled: #B4B4B4;
 }
 
 $color-primary-dark: var(--color-primary-dark);
@@ -20,4 +22,6 @@ $color-secondary-light: var(--color-secondary-light);
 $color-accent: var(--color-accent);
 $color-accent-hover: var(--color-accent-hover);
 $color-back: var(--color-back);
-$color-error: var(--color-error)
+$color-error: var(--color-error);
+$color-disabled: var(--color-disabled);
+$color-accent-secondary: var(--color-accent-secondary)

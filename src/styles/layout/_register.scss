@@ -10,7 +10,15 @@
             padding-left: 10px;
             padding-right: 10px;
         }
-    .button{
+}
+.form{
+    width: 328px;
+    margin-left: auto;
+    margin-right: auto;
+    @media screen and (min-width: $bp-tablet) {
+            width: 380px;
+        }
+    .button {
         margin-left: auto;
         margin-right: auto;
     }
@@ -35,9 +43,6 @@
     padding-right: 4px;
     transition: transform 150ms linear, font-size 150ms linear;
 }
-.labelError {
-    color: $color-error;
-}
 .input{
     width: 100%;
     padding: 14px 16px;
@@ -50,9 +55,6 @@
     line-height: 1.625;
     outline: none;
 }
-.inputError{
-    border-color: $color-error;
-}
 .input:focus + label, .input:not(:placeholder-shown)+.label{
    transform: translateY(-21px);
     font-size: 12px;
@@ -62,7 +64,12 @@
 .radioCover{
     margin-bottom: 47px;
 }
+.positionLabel{
+    display: block;
+    margin-bottom: 11px;
+}
 .uploadCover{
+    position: relative;
     width: 100%;
     height: 54px;
     display: flex;
@@ -74,6 +81,7 @@
     width: 83px;
     border: 1px solid $color-primary-dark;
     border-radius: 4px 0px 0px 4px;
+    cursor: pointer;
 }
 .status{
     padding: 14px 16px;
@@ -97,7 +105,20 @@
     font-size: 12px;
     line-height: 1.16;
 }
-
+.helper {
+    position: absolute;
+    bottom: -16px;
+    left: 16px;
+    color: $color-secondary-dark;
+    font-size: 12px;
+    line-height: 1.16;
+}
+.labelError {
+    color: $color-error;
+}
+.inputError {
+    border-color: $color-error;
+}
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
