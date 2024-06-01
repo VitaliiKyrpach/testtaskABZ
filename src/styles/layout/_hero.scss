@@ -12,14 +12,15 @@
   background-position: center;
   background-size: cover;
   padding-top: 40px;
-  padding-bottom: 123px;
+  padding-bottom: 71px;
   @media screen and (min-width: $bp-tablet) {
     padding-top: 89px;
-    padding-bottom: 89px;
+    padding-bottom: 88px;
   }
   @media screen and (min-width: $bp-desktop) {
+    width: 1024px;
     padding-top: 164px;
-    padding-bottom: 164px;
+    padding-bottom: 163px;
   }
   .cover {
     text-align: center;
