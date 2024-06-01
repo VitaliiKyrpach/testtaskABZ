@@ -1,47 +1,24 @@
-.button{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-    color: $color-primary-dark;
-    background-color: $color-accent;
-    width: 100px;
-    height: 34px;
-    border: none;
-    border-radius: 80px;
-    outline: none;
-    cursor: pointer;
-    transition: background-color 150ms linear;
+.button {
+  @extend %text;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-primary-dark;
+  background-color: $color-accent;
+  width: 100px;
+  height: 34px;
+  border: none;
+  border-radius: 80px;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 150ms linear;
 }
-.button:hover, .button:focus{
-    background-color: $color-accent-hover;
+.button:hover,
+.button:focus {
+  background-color: $color-accent-hover;
 }
-.button:disabled{
-    cursor: not-allowed;
-    color: $color-primary-light;
-    background-color: $color-disabled;
-}
-
-.radio{
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 7px;
-}
-.radioInput{
-    width: 20px;
-    height: 20px;
-    margin: 0;
-    /* hiding browser el */
-    appearance: none;
-    /* Safari support */
-    -webkit-appearance: none;
-    border: 1px solid $color-secondary-light;
-    border-radius: 50%;    
-}
-.radioInput:checked{
-    box-shadow: 0 0 0 1px $color-accent-secondary;
-        background-color: $color-accent-secondary;
-        border-width: 4px;
-        border-color: $color-back;
+.button:disabled {
+  cursor: not-allowed;
+  color: $color-primary-light;
+  background-color: $color-disabled;
 }

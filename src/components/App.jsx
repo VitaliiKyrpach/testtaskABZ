@@ -1,19 +1,22 @@
-// import reactLogo from './assets/react.svg'
-
-import { Catalog } from "./Catalog/Catalog"
-import { Register } from "./Register/Register"
-import { Header } from "./Header/Header"
-import { Hero } from "./Hero/Hero"
-
+import { Catalog } from "./Catalog/Catalog";
+import { Register } from "./Register/Register";
+import { Header } from "./Header/Header";
+import { Hero } from "./Hero/Hero";
+import { useSelector } from "react-redux";
+import { selectIsLoading } from "../redux/catalogSelectors";
+import { Loader } from "./Loader/Loader";
 
 export const App = () => {
-  return <>
-  <Header/>
-  <main>
-     <Hero/>
-     <Catalog/>
-     <Register/>
-  </main>
-  </>
-}
-
+  const isLoad = useSelector(selectIsLoading);
+  return (
+    <>
+      <Header />
+      <main>
+        <Hero />
+        <Catalog />
+        <Register />
+        {isLoad && <Loader />}
+      </main>
+    </>
+  );
+};

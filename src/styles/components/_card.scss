@@ -1,39 +1,37 @@
-.card{
-    width: 328px;
-    height: 254px;
-    background-color: $color-primary-light;
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-    @media screen and (min-width: $bp-tablet) {
-        width: 344px;
-      }
-      @media screen and (min-width: $bp-desktop) {
-        width: 282px;
-      }
-      @media screen and (min-width: $bp-wide) {
-        width: 370px;
-      }
-    .photo{
-      display: block;
-      width: 70px;
-      height: 70px;
-        border-radius: 50%;
-        margin: 0px auto 20px;
-    }
-    .name{
-        font-size: 16px;
-        line-height: 1.625;
-        font-weight: 400;
-        color: $color-primary-dark;
-        margin-bottom: 20px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-    .text{
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
+.card {
+  width: 328px;
+  height: 254px;
+  background-color: $color-primary-light;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  @media screen and (min-width: $bp-tablet) {
+    width: 344px;
+  }
+  @media screen and (min-width: $bp-desktop) {
+    width: 282px;
+  }
+  @media screen and (min-width: $bp-wide) {
+    width: 370px;
+  }
+  .photo {
+    display: block;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin: 0px auto 20px;
+  }
+  .name {
+    @extend %text;
+    color: $color-primary-dark;
+    margin-bottom: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }

@@ -1,7 +1,7 @@
 export const RadioButton = ({ id, name, value, checked, label, onChange }) => (
-    <div className='radio'>
+  <div className="radio">
     <input
-      className='radioInput'
+      className="radioInput"
       type="radio"
       id={id}
       name={name}
@@ -9,7 +9,7 @@ export const RadioButton = ({ id, name, value, checked, label, onChange }) => (
       checked={checked}
       onChange={onChange}
     />
-    <label className='radioLabel' htmlFor={id}>
+    <label className="radioLabel" htmlFor={id}>
       {label}
     </label>
   </div>
