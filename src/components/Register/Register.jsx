@@ -1,6 +1,5 @@
 import { Container } from "../Container/Container";
 import { Formik, Field, Form, ErrorMessage } from "formik";
-import * as yup from "yup";
 import { Button } from "../Button/Button";
 import { RadioButton } from "../RadioButton/RadioButton";
 import { Modal } from "../Modal/Modal";
@@ -10,42 +9,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { createUser } from "../../redux/catalogOperations";
 import { handleSuccess } from "../../redux/catalogSlice.js";
 import { selectSuccess } from "../../redux/catalogSelectors";
-
-const num = /^\+?380\d{9}$/;
-
-const validSchema = yup.object().shape({
-  name: yup.string().required("required").min(2).max(60),
-  email: yup
-    .string()
-    .required("required")
-    .min(2)
-    .max(100)
-    .matches(/^\w+@[a-zA-Z]+?\.[a-zA-Z]{2,3}$/)
-    .email("Invalid email address"),
-  phone: yup
-    .string()
-    .max(13)
-    .matches(num, { message: "Please enter a valid number" })
-    .required("required"),
-  position_id: yup.number().required("required").min(1),
-  photo: yup
-    .mixed()
-    .required("required")
-    .test("File is required", "File ", (file) => file)
-    .test("fileSize", "File size must be less than 5MB", (file) => {
-      if (file) {
-        return file.size <= 5000000;
-      }
-      return false;
-    })
-    .test("fileFormat", "Only jpeg/jpg files are allowed", (file) => {
-      if (file) {
-        const isValid = ["jpeg", "jpg"];
-        return isValid.includes(file.name.split(".").pop());
-      }
-      return false;
-    }),
-});
+import { validSchema } from "../../schemas/schemas.js";
 
 export const Register = () => {
   const isSuccess = useSelector(selectSuccess);
@@ -73,7 +37,6 @@ export const Register = () => {
   }, [isSuccess, dispatch]);
 
   const handleSubmit = async (values, { resetForm }) => {
-    console.log(values);
     await getToken();
     dispatch(createUser(values));
     resetForm();
